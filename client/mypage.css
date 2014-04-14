@@ -1,1 +1,23 @@
-/* CSS declarations go here */
+.thumb-wrapper{
+    width: 160px;
+    height: 120px;        
+    overflow: hidden;    
+    position: relative;
+    margin: 0 auto;
+}
+.thumb-wrapper .img{
+    display: block;    
+    position: absolute;
+    width: 160px;
+    height: 120px;
+    left: 50%;
+    margin-left: -175px;
+}
+.thumb-wrapper .img img{
+    width: auto !important;
+    max-width: 80px !important;
+    min-width: 60px !important;
+    height: 250px !important; 
+    margin: 0 auto;
+    display: block;
+}
