@@ -6,8 +6,7 @@ Template.contact.events({
 		Meteor.call('sendEmail',
             'a.shehata@uky.edu',
             email,
-            name + " " + email,
+            (name + " " + email),
             messageContent);
-
 	}
 })

@@ -1,3 +1,5 @@
+process.env.MAIL_URL="smtp://alyehabshehata%40gmail.com:Aloosh99@smtp.gmail.com:465/"; 
+
 Meteor.methods({
   sendEmail: function (to, from, subject, text) {
     check([to, from, subject, text], [String]);
@@ -12,5 +14,6 @@ Meteor.methods({
       subject: subject,
       text: text
     });
+    console.log("Email Sent!")
   }
 });
