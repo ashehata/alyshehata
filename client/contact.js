@@ -3,8 +3,9 @@ Template.contact.events({
 		var messageContent = tmpl.find(".messageContent").value;
 		var name = tmpl.find(".name").value;
 		var email = tmpl.find(".email").value;
+		console.log("clicked");
 		Meteor.call('sendEmail',
-            'aly%40alyshehata.com',
+            'alyshehata13@gmail.com',
             email,
             (name + " " + email),
             messageContent);

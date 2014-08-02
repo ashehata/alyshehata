@@ -1,21 +1,16 @@
-Meteor.startup(function () {
-process.env.MAIL_URL="smtp://aly%40alyshehata.com:alool1995@smtp.1and1.com:25/"; 
-})
+process.env.MAIL_URL="smtp://alyshehata13%40gmail.com:alool1995@smtp.gmail.com:465/"; 
+
+
+
 
 Meteor.methods({
-  sendEmail: function (to, from, subject, text) {
-    check([to, from, subject, text], [String]);
-
-    // Let other method calls from the same client start running,
-    // without waiting for the email sending to complete.
-    this.unblock();
-
+  sendEmail: function (from, to, subject, text) {
+    console.log("Sending email");
     Email.send({
-      to: "a.shehata%40uky.edu",
-      from: from,
+      from: "a.shehata@uky.edu",
+      to: "a.shehata@uky.edu",
       subject: subject,
       text: text
     });
-    console.log("Email Sent!")
   }
 });
