@@ -4,7 +4,7 @@ Template.contact.events({
 		var name = tmpl.find(".name").value;
 		var email = tmpl.find(".email").value;
 		Meteor.call('sendEmail',
-            'a.shehata@uky.edu',
+            'aly%40alyshehata.com',
             email,
             (name + " " + email),
             messageContent);

@@ -1,4 +1,6 @@
-process.env.MAIL_URL="smtp://alyehabshehata%40gmail.com:Aloosh99@smtp.gmail.com:465/"; 
+Meteor.startup(function () {
+process.env.MAIL_URL="smtp://aly%40alyshehata.com:alool1995@smtp.1and1.com:25/"; 
+})
 
 Meteor.methods({
   sendEmail: function (to, from, subject, text) {
@@ -9,7 +11,7 @@ Meteor.methods({
     this.unblock();
 
     Email.send({
-      to: "a.shehata@uky.edu",
+      to: "a.shehata%40uky.edu",
       from: from,
       subject: subject,
       text: text
