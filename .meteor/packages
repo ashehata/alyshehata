@@ -9,3 +9,5 @@ insecure
 bootstrap-3
 bootstrap-image-gallery
 iron-router
+email
+mandrill

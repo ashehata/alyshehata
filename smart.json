@@ -2,6 +2,7 @@
   "packages": {
     "bootstrap-3": {},
     "bootstrap-image-gallery": {},
-    "iron-router": {}
+    "iron-router": {},
+    "mandrill": {}
   }
 }

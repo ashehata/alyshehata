@@ -1,16 +1,21 @@
-process.env.MAIL_URL="smtp://alyshehata13%40gmail.com:alool1995@smtp.gmail.com:465/"; 
-
-
-
+Meteor.startup(function() {
+	Meteor.Mandrill.config({
+	    username: "a.sh@outlook.com",
+	    key: "a7B6rWVW5DNrPupxvJa8Ew"
+	  });
+});
 
 Meteor.methods({
-  sendEmail: function (from, to, subject, text) {
-    console.log("Sending email");
-    Email.send({
-      from: "a.shehata@uky.edu",
-      to: "a.shehata@uky.edu",
-      subject: subject,
-      text: text
-    });
-  }
-});
+	sendContactEmail : function(subject, message) {
+		console.log("Sending Email!")
+	   	Meteor.Mandrill.send({
+	    to: "a.shehata@uky.edu",
+	    from: "aly@alyshehata.com",
+	    from_name: "Aly Shehata",
+	    subject: subject,
+	    text: message
+	  		});
+	   }
+
+})
+
